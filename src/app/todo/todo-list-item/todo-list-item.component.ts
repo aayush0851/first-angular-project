@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, } from '@angular/core';
 import { Todo } from '../todo.model';
 import { TodoService } from '../todo.service';
 
@@ -15,7 +15,12 @@ export class TodoListItemComponent implements OnInit {
   }
 
   deleteTodo(todo_id: number){
-    this.todoService.todoArray = this.todoService.todoArray.filter((todo: Todo)=> todo.todo_id!==todo_id);
+    let i = this.todoService.todoArray.length;
+    while(i--){
+      if(this.todoService.todoArray[i].todo_id===todo_id){
+        this.todoService.todoArray.splice(i,1);
+      }
+    }
   }
 
   checkTodo(todo_id: number){
