@@ -1,0 +1,12 @@
+<div>
+
+    <input type="checkbox" (click)="checkTodo(todo.todo_id)" [checked]='todo.todo_done'/>
+    <li [ngStyle]="{'text-decoration': todo.todo_done?'line-through':'none'}">
+        {{todo.todo_name}}
+    </li>
+
+    <input type="button" value="X" (click)="deleteTodo(todo.todo_id)"/>
+
+</div>
+
+<hr/>

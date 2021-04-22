@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="nav nav-tabs">
+
+        <li role="presentation" routerLinkActive="active">
+          <a routerLink="/test">Test</a>
+        </li>
+        <li role="presentation" routerLinkActive="active">
+          <a routerLink="/todo">Todo</a>
+        </li>
+        <li role="presentation" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/tree">Tree</a>
+        </li>
+        <li role="presentation" routerLinkActive="active">
+          <a routerLink="/tree/details/">Details</a>
+        </li>
+      </ul>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+      <!-- <app-header></app-header> -->
+    </div>
+  </div>
+</div>
