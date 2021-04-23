@@ -9,6 +9,7 @@ import { DetailsComponent } from './details/details.component';
 import { TreeComponent } from "./tree/tree.component";
 import { NotFoundComponent } from "./not-found/not-found.component";
 import { AuthGuardService } from "./auth-guard.service";
+import { SubmitFormComponent } from "./submit-form/submit-form.component";
 
 const appRoutes: Routes = [
     { path: '', component: HeaderComponent },
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
     { path: 'tree',component: TreeComponent },
     { path: 'tree/details/:todo_id', component: DetailsComponent},
     { path: 'test', component: TestComponent},
+    { path: 'register', component: SubmitFormComponent},
     // { path: 'not-found', component: NotFoundComponent},
     // { path: '**', redirectTo: 'not-found'}
   ]

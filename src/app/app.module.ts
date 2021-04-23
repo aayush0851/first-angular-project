@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthGuardService } from './auth-guard.service';
 import { AuthSerivce } from './auth.service';
+import { SubmitFormComponent } from './submit-form/submit-form.component';
 
 
 
@@ -30,7 +31,8 @@ import { AuthSerivce } from './auth.service';
     TreeComponent,
     TestComponent,
     DetailsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SubmitFormComponent
   ],
   imports: [
     BrowserModule,

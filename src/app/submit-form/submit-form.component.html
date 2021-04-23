@@ -1,0 +1,25 @@
+<h3>Register</h3>
+<form (ngSubmit)="onSubmit( )" #data="ngForm">
+    <div
+        ngModelGroup="userData"
+        #userData="ngModelGroup">
+        <label for="name">Name</label>
+        <input type="text" ngModel name="name" required/>
+        <br/>
+        <label for="email">Email</label>
+        <input type="email" 
+            ngModel 
+            name="email" 
+            required 
+            email
+            #email="ngModel"/>
+            <br/>
+        <span *ngIf="!email.valid && email.touched">Enter a valid email</span>
+    </div>
+    <br/>
+    <label for="password">Password</label>
+    <input type="password" ngModel name="password" required/>
+    <br/>
+    <button type="submit" [disabled]="!data.valid">Submit</button>
+    <button type="submit" [disabled]="userData.valid" (click)="fillSampleData()">Fill Randomly</button>
+</form>
